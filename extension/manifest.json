@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "HIFY US Stocks — INDmoney Sync",
+  "version": "0.1.0",
+  "description": "Captures live US Stocks holdings, orders, and wallet history from INDmoney and syncs to HIFY US Stocks Trading Journal.",
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*.indmoney.com/*",
+    "https://indmoney.com/*",
+    "http://localhost:3010/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.indmoney.com/investments/us-stocks*",
+        "https://indmoney.com/investments/us-stocks*"
+      ],
+      "js": ["indmoney_main_bridge.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://*.indmoney.com/investments/us-stocks*",
+        "https://indmoney.com/investments/us-stocks*"
+      ],
+      "js": ["config.js", "indmoney_content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  /* HIFY Brand Book V1.0 — Gold Identity + Neutral Intelligence (Light Mode) */
+  --primary: #c8a951;
+  --primary-hover: #b6933a;
+  --primary-deep: #8e6c20;
+  --primary-light: #efe3c3;
+  --primary-soft: #f5efe1;
+  --section-bg: #f4f4f5;
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --surface-raised: #f4f4f5;
+  --text-main: #18181b;
+  --text-muted: #71717a;
+  --border: #e4e4e7;
+  --glow: rgba(200, 169, 81, 0.12);
+  --success: #10b981;
+  --error: #f43f5e;
+  --warning: #ea580c;
+}
+
+.dark {
+  /* HIFY Brand Book V1.0 — Gold Identity + Neutral Intelligence (Dark Mode) */
+  --primary: #c8a951;
+  --primary-hover: #b6933a;
+  --primary-deep: #8e6c20;
+  --primary-light: #efe3c3;
+  --primary-soft: rgba(200, 169, 81, 0.14);
+  --section-bg: #27272a;
+  --bg: #121214;
+  --surface: #18181b;
+  --surface-raised: #27272a;
+  --text-main: #ededed;
+  --text-muted: #a1a1aa;
+  --border: #2e2e33;
+  --glow: rgba(200, 169, 81, 0.14);
+  --success: #10b981;
+  --error: #f43f5e;
+  --warning: #ea580c;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text-main);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-section-bg: var(--section-bg);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hify-card,
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 1px 2px 0 rgba(10, 15, 15, 0.04),
+    0 6px 20px -6px var(--glow);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #18181b;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  transition: background-color 0.15s ease;
+}
+.btn-secondary:hover {
+  background: var(--primary-soft);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
