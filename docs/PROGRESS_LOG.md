@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-11-27 22:20 IST — Polyrepo GitHub Setup, HIFY-Hub & Tailscale Silent Mode
+
+- **Completed Today:**
+  - Added **Git Polyrepo Isolation & Tailscale One-Link Contract** to `GEMINI.md` and created `.agents/skills/git-safe-commit/SKILL.md`.
+  - Audited `.gitignore` (`.env*`, `*.db`, `data/`, `Reports/`), initialized Git, and pushed private repo `happyinvestingwithsan/hify-us-stocks` (`190353a`, 77 files, 0 secret/data leaks).
+  - Connected `US Stocks` (`:3010`) into unified `HIFY-Hub` (`:3099`), `HIFY_Trading.code-workspace`, `sync-all.ps1`, `.vscode/tasks.json`, `start-background.ps1` (Production Silent Mode), and `stop-all.ps1`.
+- **Verified State:**
+  - `npm run build` (`next build`): compiled cleanly, 15/15 static pages generated.
+  - Tailscale Silent Mode health check: `http://laptop-9hp2cc0d.tailb8bfc0.ts.net:3099/api/health` reported `"usStocks":true`.
+
+---
+
 ## 2026-11-27 19:53 IST — Epic B2 (Live Yahoo Quotes, 30% Sell GTT Rule & 3-Tier Open Lots UI)
 
 - **Completed Today:**
